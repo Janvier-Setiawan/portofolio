@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janvier Setiawan - Writer | Full Stack Developer</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="logo-circle"></div>
+                <div class="loading-text">Janvier</div>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Animated Background Canvas -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navigation" id="navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Portfolio</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active" data-color="#3B82F6" data-section="home">
+                        <span class="nav-icon">🏠</span>
+                        <span class="nav-text">Profile</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" data-color="#10B981" data-section="projects">
+                        <span class="nav-icon">💼</span>
+                        <span class="nav-text">Projects</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#writing" class="nav-link" data-color="#F59E0B" data-section="writing">
+                        <span class="nav-icon">✍️</span>
+                        <span class="nav-text">Writing</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-color="#8B5CF6" data-section="contact">
+                        <span class="nav-icon">📧</span>
+                        <span class="nav-text">Contact</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="nav-indicator"></div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="section hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-name">
+                            <span class="name-line">Janvier Setiawan</span>
+                        </h1>
+                        <div class="hero-title">
+                            <span class="title-role">Writer</span>
+                            <span class="title-separator">|</span>
+                            <span class="title-role">Full Stack Developer</span>
+                        </div>
+                        <div class="hero-welcome">
+                            <span class="welcome-text">Welcome to my page!</span>
+                            <span class="cursor-blink">||</span>
+                        </div>
+                        <p class="hero-description">
+                            I'm a passionate full-stack developer and technical writer who loves creating digital experiences 
+                            that bridge the gap between technology and human connection. With expertise in 
+                            modern web technologies and a flair for storytelling, I craft solutions that 
+                            are both functional and inspiring.
+                        </p>
+                        <div class="hero-actions">
+                            <button class="cta-button primary">
+                                <span>View My Work</span>
+                                <div class="button-ripple"></div>
+                            </button>
+                            <button class="cta-button secondary">
+                                <span>Get In Touch</span>
+                                <div class="button-ripple"></div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="profile-card">
+                            <div class="profile-image">
+                                <div class="profile-placeholder">
+                                    <span>👨‍💻</span>
+                                </div>
+                            </div>
+                            <div class="profile-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">50+</span>
+                                    <span class="stat-label">Projects</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">3+</span>
+                                    <span class="stat-label">Years</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">100+</span>
+                                    <span class="stat-label">Articles</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-description">
+                        Here are some of my recent works that showcase my skills and passion for development.
+                    </p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-project="1">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <span>🚀</span>
+                            </div>
+                            <div class="project-overlay">
+                                <button class="project-view">View Project</button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">E-Commerce Platform</h3>
+                            <p class="project-description">
+                                A full-stack e-commerce solution built with React, Node.js, and MongoDB.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MongoDB</span>
+                                <span class="tag">Stripe</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="2">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <span>📱</span>
+                            </div>
+                            <div class="project-overlay">
+                                <button class="project-view">View Project</button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Mobile Task Manager</h3>
+                            <p class="project-description">
+                                A cross-platform mobile app for productivity and task management.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">React Native</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">Redux</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="3">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <span>🎨</span>
+                            </div>
+                            <div class="project-overlay">
+                                <button class="project-view">View Project</button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Design System</h3>
+                            <p class="project-description">
+                                A comprehensive design system with reusable components and documentation.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Vue.js</span>
+                                <span class="tag">Storybook</span>
+                                <span class="tag">Sass</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Writing Section -->
+        <section id="writing" class="section writing-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Latest Writing</h2>
+                    <p class="section-description">
+                        Thoughts on technology, development, and the intersection of code and creativity.
+                    </p>
+                </div>
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="article-date">July 20, 2025</span>
+                            <span class="article-category">Development</span>
+                        </div>
+                        <h3 class="article-title">
+                            Building Scalable Web Applications with Modern JavaScript
+                        </h3>
+                        <p class="article-excerpt">
+                            Exploring the latest patterns and practices for creating maintainable, 
+                            performant web applications that scale with your business needs.
+                        </p>
+                        <div class="article-actions">
+                            <button class="article-read">Read More</button>
+                            <div class="article-stats">
+                                <span>5 min read</span>
+                                <span>•</span>
+                                <span>124 views</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="article-date">July 18, 2025</span>
+                            <span class="article-category">Design</span>
+                        </div>
+                        <h3 class="article-title">
+                            The Art of Micro-Interactions in User Experience
+                        </h3>
+                        <p class="article-excerpt">
+                            How small animations and feedback mechanisms can dramatically improve 
+                            user engagement and create memorable digital experiences.
+                        </p>
+                        <div class="article-actions">
+                            <button class="article-read">Read More</button>
+                            <div class="article-stats">
+                                <span>8 min read</span>
+                                <span>•</span>
+                                <span>89 views</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="article-date">July 15, 2025</span>
+                            <span class="article-category">Technology</span>
+                        </div>
+                        <h3 class="article-title">
+                            AI-Powered Development: Tools That Actually Help
+                        </h3>
+                        <p class="article-excerpt">
+                            A practical look at AI tools that enhance developer productivity 
+                            without replacing human creativity and problem-solving skills.
+                        </p>
+                        <div class="article-actions">
+                            <button class="article-read">Read More</button>
+                            <div class="article-stats">
+                                <span>6 min read</span>
+                                <span>•</span>
+                                <span>156 views</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-description">
+                        Ready to collaborate or just want to say hello? I'd love to hear from you.
+                    </p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>janvier.setiawan@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-details">
+                                <h4>LinkedIn</h4>
+                                <p>linkedin.com/in/janvier-setiawan</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🐙</div>
+                            <div class="contact-details">
+                                <h4>GitHub</h4>
+                                <p>github.com/Janvier-Setiawan</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🐦</div>
+                            <div class="contact-details">
+                                <h4>Twitter</h4>
+                                <p>@janvier_dev</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form class="form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="form-submit">
+                                <span>Send Message</span>
+                                <div class="button-ripple"></div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Floating Action Button -->
+    <div class="fab-container" id="fabContainer">
+        <button class="fab-main" id="fabMain">
+            <span class="fab-icon">⚡</span>
+        </button>
+        <div class="fab-options">
+            <button class="fab-option" data-action="top" title="Back to Top">
+                <span>🔝</span>
+            </button>
+            <button class="fab-option" data-action="contact" title="Contact Me">
+                <span>📧</span>
+            </button>
+            <button class="fab-option" data-action="projects" title="View Projects">
+                <span>💼</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

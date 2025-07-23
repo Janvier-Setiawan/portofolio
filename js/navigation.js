@@ -10,6 +10,7 @@ class AdaptiveNavigation {
         this.navLinks = document.querySelectorAll('.nav-link');
         this.sections = document.querySelectorAll('.section');
         this.indicator = document.querySelector('.nav-indicator');
+        this.socialLinks = document.querySelectorAll('.social-link');
         
         this.currentSection = 'home';
         this.isCompact = false;
